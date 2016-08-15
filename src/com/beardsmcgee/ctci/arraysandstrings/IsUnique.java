@@ -12,8 +12,8 @@ public class IsUnique {
 		if(s.equals("") || s.equals(null)){
 			throw new IllegalArgumentException();
 		}
-		char[] letters = s.toLowerCase().toCharArray();
-		int size = letters.length;
+		
+		int size = s.length();
 		int current = 0;
 		
 		/*
@@ -26,7 +26,7 @@ public class IsUnique {
 		boolean unique = true;
 		while(current < size){
 			for(int i = current + 1; i < size; i++){
-					if(letters[current] == letters[i]){
+					if(s.charAt(current) == s.charAt(i)){
 						unique = false;
 						i = size;
 				}
